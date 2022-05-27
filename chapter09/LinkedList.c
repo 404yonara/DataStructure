@@ -134,3 +134,21 @@ void	PrintLnCurrent(const List *list)
 	PrintCurrent(list);
 	putchar('\n');
 }
+
+void	Print(const List *list)
+{
+	if (!(list->head))
+		puts("노드가 없습니다.");
+	else
+	{
+		Node	*ptr;
+		ptr = list->head;
+		puts("[모두 보기]");
+		while ()
+	}
+}
+
+void Terminate(List *list)
+{
+	Clear(list);
+}
