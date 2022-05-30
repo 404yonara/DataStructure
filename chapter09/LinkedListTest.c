@@ -70,6 +70,32 @@ int	main(void)
 			RemoveCurrent(&list);
 			break;
 			
+		case SRCH_NO :
+			x = ScanMember("검색", MEMBER_NO);
+			if (search(&list, &x, MemberNoCmp) != NULL)
+				PrintLnCurrent(&list);
+			else
+				puts("그 번호의 데이터가 없습니다.");
+			break;
+
+		case SRCH_NAME :
+			x = ScanMember("검색", MEMBER_NAME);
+			if (search(&list, &x, MemberNameCmp) != NULL)
+				PrintLnCurrent(&list);
+			else
+				puts("그 이름의 데이터가 없습니다.")
+			break;
+		
+		case PRINT_ALL :
+			Print(&list)
+			break;
+		
+		case CLEAR :
+			Clear(&list);
+			break;
 		}
-	}
+	} while (menu != TERMINATE);
+	Terminate(&list);
+
+	return (0);
 }
